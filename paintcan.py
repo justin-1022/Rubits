@@ -19,6 +19,7 @@ brown = (101, 67, 33)
 lightbrown = (245, 222, 179)
 lilac = (200, 162, 200)
 darkgrey = darkgray = (88, 88, 88)
+orange = (255, 128, 0)
 
 def toHex(color):
     return "#%02x%02x%02x" % tuple(color)

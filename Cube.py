@@ -1,36 +1,26 @@
 import copy
 from tkinter import *
-import import paintcan
+from header import *
 
 class Cube():
     #note - these can be changed to anything, temp values for now
-    white = paintcan.white
-    red = paintcan.red
-    yellow = paintcan.yellow
-    orange = paintcan.orange
-    blue = paintcan.blue
-    green = paintcan.green
 
-    right = 'r'
-    left = 'l'
-    up = 'u'
-    down = 'd'
     #rubucks cube
     def __init__(self):
         #[front, right, back, left, top, bottom]
-        self.state = [white, red, yellow, orange, blue, green]
+        self.state = [WHITE, RED, YELLOW, ORANGE, BLUE, GREEN]
 
-    def __eq__(self, other)
+    def __eq__(self, other):
         if self.state == other.state: return True
 
     def rotate(self, direction):
         #rotating entire cube
         ns = copy.deepcopy(self.state) #ns = new_state
 
-        if directon == right:
+        if direction == RIGHT:
             ns[0], ns[1], ns[2], ns[3] = ns[1], ns[2], ns[3], ns[0]
 
-        elif direction == up:
+        elif direction == UP:
             ns[0], ns[5], ns[2], ns[4] = ns[5], ns[2], ns[4], ns[0]
 
         else:
