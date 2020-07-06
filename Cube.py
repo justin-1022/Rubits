@@ -20,8 +20,14 @@ class Cube():
         if direction == RIGHT:
             ns[0], ns[1], ns[2], ns[3] = ns[1], ns[2], ns[3], ns[0]
 
-        elif direction == UP:
+        elif direction == DOWN:
             ns[0], ns[5], ns[2], ns[4] = ns[5], ns[2], ns[4], ns[0]
+
+        elif direction == LEFT:
+            ns[0], ns[1], ns[2], ns[3] = ns[3], ns[0], ns[1], ns[2]
+
+        elif direction == UP:
+            ns[0], ns[5], ns[2], ns[4] = ns[4], ns[0], ns[5], ns[2]
 
         else:
             return 1
