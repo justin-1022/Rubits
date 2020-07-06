@@ -5,7 +5,7 @@ from header import *
 class Shape():
     #note - these can be changed to anything, temp values for now
 
-    #rubucks cube
+    #rubucks shape
     def __init__(self):
         #[front, right, back, left, top, bottom]
         self.state = [WHITE, RED, YELLOW, ORANGE, BLUE, GREEN]
@@ -14,7 +14,7 @@ class Shape():
         if self.state == other.state: return True
 
     def rotate(self, direction):
-        #rotating entire cube
+        #rotating entire shape
         ns = copy.deepcopy(self.state) #ns = new_state
 
         if direction == RIGHT:
