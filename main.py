@@ -8,22 +8,22 @@ class Walker(App):
         self.the_shape = Shape()
 
     def keyPressed(self, event):
-        if event.key == "d":
+        if event.key == "Right":
             self.the_shape.rotate('r')
 
-        elif event.key == "w":
+        elif event.key == "Up":
             self.the_shape.rotate('u')
 
-        elif event.key == "a":
+        elif event.key == "Left":
             self.the_shape.rotate('l')
 
-        elif event.key == "s":
+        elif event.key == "Down":
             self.the_shape.rotate('d')
 
     def redrawAll(self, canvas):
         canvas.create_rectangle(0, 0, WIDTH, HEIGHT, fill=paintcan.toHex(paintcan.silver))
         canvas.create_text(WIDTH/2, 25, font=('Sans', 20),
-                text="Use 'w', 'a', 's', 'd' to control the object.")
+                text="Use the arrow keys to control.")
 
         self.the_shape.draw(canvas)
 
